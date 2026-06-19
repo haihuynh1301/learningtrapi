@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_abheroes",
+  "info": {
+    "displayName": "abhero"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "badge": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

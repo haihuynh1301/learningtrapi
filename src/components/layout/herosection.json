@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_layout_herosections",
+  "info": {
+    "displayName": "Herosection"
+  },
+  "options": {},
+  "attributes": {
+    "heroTag": {
+      "type": "string"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroSub": {
+      "type": "text"
+    },
+    "heroCta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "stats": {
+      "type": "component",
+      "component": "elements.items-stat",
+      "repeatable": true
+    },
+    "instrument": {
+      "type": "component",
+      "component": "elements.items-instrument",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

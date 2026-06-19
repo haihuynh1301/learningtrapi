@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_icon_boxes",
+  "info": {
+    "displayName": "iconBox"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

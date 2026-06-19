@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_elements_headings",
+  "info": {
+    "displayName": "heading"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "sub": {
+      "type": "text",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "showsub"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "showsub": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

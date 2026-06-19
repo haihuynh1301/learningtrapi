@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_items_instruments",
+  "info": {
+    "displayName": "instrument"
+  },
+  "options": {},
+  "attributes": {
+    "instrumentTag": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

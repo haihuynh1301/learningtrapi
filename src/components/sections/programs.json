@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_programs",
+  "info": {
+    "displayName": "programs"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

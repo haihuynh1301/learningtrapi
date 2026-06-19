@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_stories",
+  "info": {
+    "displayName": "story"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string"
+    },
+    "bigClef": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "values": {
+      "type": "component",
+      "component": "elements.icon-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

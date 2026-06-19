@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_elements_cards",
+  "info": {
+    "displayName": "cards"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "sub": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "showsub"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "showsub": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "ages": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

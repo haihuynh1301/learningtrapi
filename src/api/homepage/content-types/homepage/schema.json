@@ -1,0 +1,80 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "component": "layout.top-nav",
+      "repeatable": false
+    },
+    "heroSection": {
+      "type": "component",
+      "component": "layout.herosection",
+      "repeatable": false
+    },
+    "storySection": {
+      "type": "component",
+      "component": "sections.story",
+      "repeatable": false
+    },
+    "programs": {
+      "type": "component",
+      "component": "sections.programs",
+      "repeatable": false
+    },
+    "technique": {
+      "type": "component",
+      "component": "sections.technique",
+      "repeatable": false
+    },
+    "instructors": {
+      "type": "component",
+      "component": "sections.instructors",
+      "repeatable": false
+    },
+    "process": {
+      "type": "component",
+      "component": "sections.process",
+      "repeatable": false
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "sections.testimonials",
+      "repeatable": false
+    },
+    "pricing": {
+      "type": "component",
+      "component": "sections.pricing",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "sections.faqs",
+      "repeatable": false
+    },
+    "banner": {
+      "type": "component",
+      "component": "sections.banner",
+      "repeatable": false
+    },
+    "contact": {
+      "type": "component",
+      "component": "sections.contact",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "layout.footer",
+      "repeatable": false
+    }
+  }
+}

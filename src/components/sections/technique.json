@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_techniques",
+  "info": {
+    "displayName": "technique"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "box": {
+      "type": "component",
+      "component": "elements.icon-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

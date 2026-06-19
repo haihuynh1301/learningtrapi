@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_elements_cardspricings",
+  "info": {
+    "displayName": "cardspricing"
+  },
+  "options": {},
+  "attributes": {
+    "headingcard": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "featureitems": {
+      "type": "component",
+      "component": "elements.items-instrument",
+      "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "popular": {
+      "type": "boolean",
+      "default": false
+    },
+    "lablepopular": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "popular"
+            },
+            true
+          ]
+        }
+      }
+    }
+  },
+  "config": {}
+}
