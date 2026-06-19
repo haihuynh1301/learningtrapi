@@ -5,13 +5,18 @@ const API_URL =
 async function fetchAPI(endpoint: string) {
   const res = await fetch(
     `${API_URL}${endpoint}`,
-    {
-      cache: "no-store",
-    }
+    { cache: "no-store" }
   );
 
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status}`);
+  const contentType =
+    res.headers.get("content-type") || "";
+
+  if (!contentType.includes("application/json")) {
+    const text = await res.text();
+
+    throw new Error(
+      `Expected JSON but got: ${text.substring(0, 200)}`
+    );
   }
 
   return res.json();
