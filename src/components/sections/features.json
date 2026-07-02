@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_features",
+  "info": {
+    "displayName": "features"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "items": {
+      "type": "component",
+      "component": "elements.repeatertext",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -14,6 +14,15 @@ export default {
         hero: {
           populate: "*",
         },
+        journey: {
+          populate: "*",
+        },
+        card: {
+          populate: "*",
+        },
+        founders: {
+          populate: "*",
+        },
       },
     });
   },

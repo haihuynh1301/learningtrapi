@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_hero_pricings",
+  "info": {
+    "displayName": "heroPricing"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "item": {
+      "type": "component",
+      "component": "elements.cardspricing",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

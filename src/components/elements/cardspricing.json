@@ -36,6 +36,23 @@
           ]
         }
       }
+    },
+    "notebottom": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "shownote"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "shownote": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

@@ -15,6 +15,21 @@
       "type": "component",
       "component": "sections.abhero",
       "repeatable": false
+    },
+    "journey": {
+      "type": "component",
+      "component": "sections.ab-section2",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "sections.abcards",
+      "repeatable": false
+    },
+    "founders": {
+      "type": "component",
+      "component": "sections.founders",
+      "repeatable": false
     }
   }
 }

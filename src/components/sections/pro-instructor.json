@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_sections_pro_instructors",
+  "info": {
+    "displayName": "proInstructor"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "information": {
+      "type": "component",
+      "component": "elements.items-instrument",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

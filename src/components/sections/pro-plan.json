@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_pro_plans",
+  "info": {
+    "displayName": "proPlan"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "elements.cardspricing",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

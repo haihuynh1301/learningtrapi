@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_prolearns",
+  "info": {
+    "displayName": "prolearn"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "items": {
+      "type": "component",
+      "component": "elements.icon-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

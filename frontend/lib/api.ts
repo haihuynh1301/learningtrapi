@@ -33,3 +33,12 @@ export async function getAboutPage() {
 export async function getGlobal() {
   return fetchAPI("/api/global-full");
 }
+
+
+export async function getPricingPage() {
+  return fetchAPI("/api/pricing-plan-full");
+}
+
+export async function getPianoLesson() {
+  return fetchAPI("/api/program-full");
+}

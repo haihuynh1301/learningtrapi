@@ -27,6 +27,23 @@
     "showsub": {
       "type": "boolean",
       "default": true
+    },
+    "tracking": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "showtracking"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "showtracking": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

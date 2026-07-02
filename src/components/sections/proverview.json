@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_proverviews",
+  "info": {
+    "displayName": "proverview"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "box": {
+      "type": "component",
+      "component": "elements.icon-box",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

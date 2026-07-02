@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_abcards",
+  "info": {
+    "displayName": "abcards"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "component": "elements.item-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

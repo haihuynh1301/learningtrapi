@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_founders",
+  "info": {
+    "displayName": "founders"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

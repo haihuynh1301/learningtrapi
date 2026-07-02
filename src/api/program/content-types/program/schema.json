@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "programs",
+  "info": {
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "Programs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.programhero",
+      "repeatable": false
+    },
+    "overview": {
+      "type": "component",
+      "component": "sections.proverview",
+      "repeatable": false
+    },
+    "learn": {
+      "type": "component",
+      "component": "sections.prolearn",
+      "repeatable": false
+    },
+    "instructor": {
+      "type": "component",
+      "component": "sections.pro-instructor",
+      "repeatable": false
+    },
+    "plan": {
+      "type": "component",
+      "component": "sections.pro-plan",
+      "repeatable": false
+    }
+  }
+}

@@ -25,7 +25,9 @@ export interface ElementsCardspricing extends Struct.ComponentSchema {
     featureitems: Schema.Attribute.Component<'elements.items-instrument', true>;
     headingcard: Schema.Attribute.Component<'elements.heading', false>;
     lablepopular: Schema.Attribute.String;
+    notebottom: Schema.Attribute.String;
     popular: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    shownote: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -36,9 +38,11 @@ export interface ElementsHeading extends Struct.ComponentSchema {
   };
   attributes: {
     showsub: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    showtracking: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     sub: Schema.Attribute.Text;
     tag: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    tracking: Schema.Attribute.String;
   };
 }
 
@@ -49,7 +53,7 @@ export interface ElementsIconBox extends Struct.ComponentSchema {
   };
   attributes: {
     icon: Schema.Attribute.String;
-    subtext: Schema.Attribute.String;
+    subtext: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -176,6 +180,27 @@ export interface LayoutTopNav extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsAbSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_sections_ab_section2s';
+  info: {
+    displayName: 'journey';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    item: Schema.Attribute.Component<'elements.icon-box', true>;
+  };
+}
+
+export interface SectionsAbcards extends Struct.ComponentSchema {
+  collectionName: 'components_sections_abcards';
+  info: {
+    displayName: 'abcards';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.item-text', true>;
+  };
+}
+
 export interface SectionsAbhero extends Struct.ComponentSchema {
   collectionName: 'components_sections_abheroes';
   info: {
@@ -222,6 +247,28 @@ export interface SectionsFaqs extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_sections_features';
+  info: {
+    displayName: 'features';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    items: Schema.Attribute.Component<'elements.repeatertext', true>;
+  };
+}
+
+export interface SectionsFounders extends Struct.ComponentSchema {
+  collectionName: 'components_sections_founders';
+  info: {
+    displayName: 'founders';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SectionsHero extends Struct.ComponentSchema {
   collectionName: 'components_sections_heroes';
   info: {
@@ -234,6 +281,17 @@ export interface SectionsHero extends Struct.ComponentSchema {
     hero_title: Schema.Attribute.String;
     instrument: Schema.Attribute.Component<'elements.items-instrument', true>;
     stats: Schema.Attribute.Component<'elements.items-stat', true>;
+  };
+}
+
+export interface SectionsHeroPricing extends Struct.ComponentSchema {
+  collectionName: 'components_sections_hero_pricings';
+  info: {
+    displayName: 'heroPricing';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    item: Schema.Attribute.Component<'elements.cardspricing', true>;
   };
 }
 
@@ -259,6 +317,29 @@ export interface SectionsPricing extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsProInstructor extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pro_instructors';
+  info: {
+    displayName: 'proInstructor';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    information: Schema.Attribute.Component<'elements.items-instrument', true>;
+  };
+}
+
+export interface SectionsProPlan extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pro_plans';
+  info: {
+    displayName: 'proPlan';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'elements.cardspricing', false>;
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+  };
+}
+
 export interface SectionsProcess extends Struct.ComponentSchema {
   collectionName: 'components_sections_processes';
   info: {
@@ -270,6 +351,20 @@ export interface SectionsProcess extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsProgramhero extends Struct.ComponentSchema {
+  collectionName: 'components_sections_programheroes';
+  info: {
+    displayName: 'programhero';
+  };
+  attributes: {
+    badge: Schema.Attribute.Text;
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    icon: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    items: Schema.Attribute.Component<'elements.item-text', true>;
+  };
+}
+
 export interface SectionsPrograms extends Struct.ComponentSchema {
   collectionName: 'components_sections_programs';
   info: {
@@ -277,6 +372,29 @@ export interface SectionsPrograms extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'elements.cards', true>;
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+  };
+}
+
+export interface SectionsProlearn extends Struct.ComponentSchema {
+  collectionName: 'components_sections_prolearns';
+  info: {
+    displayName: 'prolearn';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'elements.heading', false>;
+    items: Schema.Attribute.Component<'elements.icon-box', true>;
+  };
+}
+
+export interface SectionsProverview extends Struct.ComponentSchema {
+  collectionName: 'components_sections_proverviews';
+  info: {
+    displayName: 'proverview';
+  };
+  attributes: {
+    box: Schema.Attribute.Component<'elements.icon-box', true>;
+    button: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.Component<'elements.heading', false>;
   };
 }
@@ -334,15 +452,25 @@ declare module '@strapi/strapi' {
       'layout.footer': LayoutFooter;
       'layout.herosection': LayoutHerosection;
       'layout.top-nav': LayoutTopNav;
+      'sections.ab-section2': SectionsAbSection2;
+      'sections.abcards': SectionsAbcards;
       'sections.abhero': SectionsAbhero;
       'sections.banner': SectionsBanner;
       'sections.contact': SectionsContact;
       'sections.faqs': SectionsFaqs;
+      'sections.features': SectionsFeatures;
+      'sections.founders': SectionsFounders;
       'sections.hero': SectionsHero;
+      'sections.hero-pricing': SectionsHeroPricing;
       'sections.instructors': SectionsInstructors;
       'sections.pricing': SectionsPricing;
+      'sections.pro-instructor': SectionsProInstructor;
+      'sections.pro-plan': SectionsProPlan;
       'sections.process': SectionsProcess;
+      'sections.programhero': SectionsProgramhero;
       'sections.programs': SectionsPrograms;
+      'sections.prolearn': SectionsProlearn;
+      'sections.proverview': SectionsProverview;
       'sections.story': SectionsStory;
       'sections.technique': SectionsTechnique;
       'sections.testimonials': SectionsTestimonials;

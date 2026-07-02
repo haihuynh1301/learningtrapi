@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_programheroes",
+  "info": {
+    "displayName": "programhero"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "elements.heading",
+      "repeatable": false
+    },
+    "items": {
+      "type": "component",
+      "component": "elements.item-text",
+      "repeatable": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
