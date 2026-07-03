@@ -1,8 +1,5 @@
 import Link from "next/link";
-
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://localhost:1337";
+import { getImageUrl } from "@/lib/image";
 
 type HeroABProps = {
   hero: any;
@@ -12,6 +9,8 @@ export default function HeroAB({
   hero,
 }: HeroABProps) {
   if (!hero) return null;
+
+  const imageUrl = getImageUrl(hero?.image?.url);
 
   return (
     <section className="relative py-section-padding-v overflow-hidden staff-lines">
@@ -62,20 +61,20 @@ export default function HeroAB({
 
         {/* Image */}
         <div className="md:col-span-5 relative">
-
           <div className="aspect-[4/5] bg-cream-dark rounded-sm overflow-hidden shadow-2xl relative z-10">
 
-            {hero.image && (
+            {imageUrl && (
               <img
-                // src={`${API_URL}${hero.image.url}`}
-                src={hero.image.url}
+                src={imageUrl}
                 alt={
-                  hero.image.alternativeText ||
-                  hero.heading?.title
+                  hero.image?.alternativeText ||
+                  hero.heading?.title ||
+                  ""
                 }
                 className="w-full h-full object-cover"
               />
             )}
+
           </div>
 
           <div className="absolute -bottom-8 -left-8 glass-card p-8 rounded-sm text-gold-pale z-20 hidden md:block border border-gold-light/20">
@@ -83,22 +82,18 @@ export default function HeroAB({
             <span
               className="block font-stat-display text-stat-display mb-1 text-gold-light"
               dangerouslySetInnerHTML={{
-                __html:
-                  hero.badge?.split("<br>")[0] || "",
+                __html: hero.badge?.split("<br>")[0] || "",
               }}
             />
 
             <span
               className="font-label-md text-label-md uppercase tracking-widest opacity-80"
               dangerouslySetInnerHTML={{
-                __html:
-                  hero.badge?.split("<br>")[1] || "",
+                __html: hero.badge?.split("<br>")[1] || "",
               }}
             />
           </div>
-
         </div>
-
       </div>
     </section>
   );

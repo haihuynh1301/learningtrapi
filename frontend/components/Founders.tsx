@@ -1,22 +1,21 @@
+import { getImageUrl } from "@/lib/image";
+
 type Props = {
   founders: any;
 };
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://127.0.0.1:1337";
-
 export default function Founders({
   founders,
 }: Props) {
-  const imageUrl = founders.image?.url
-    ? `${API_URL}${founders.image.url}`
-    : null;
+  // Tránh lỗi nếu founders = null
+  if (!founders) return null;
+
+  const imageUrl = getImageUrl(founders?.image?.url);
 
   return (
     <section className="py-section-padding-v bg-white">
       <div className="px-[5vw] max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter-grid items-center">
-        
+
         {/* Image */}
         <div className="order-2 md:order-1">
           <div className="relative">
@@ -26,6 +25,7 @@ export default function Founders({
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   src={imageUrl}
                   alt={
+                    founders.image?.alternativeText ||
                     founders.heading?.title ||
                     "Founder"
                   }
@@ -46,8 +46,7 @@ export default function Founders({
           <h2
             className="font-headline-lg text-headline-lg text-primary mb-6"
             dangerouslySetInnerHTML={{
-              __html:
-                founders.heading?.title || "",
+              __html: founders.heading?.title || "",
             }}
           />
 
