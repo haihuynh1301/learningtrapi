@@ -67,7 +67,8 @@ export default function HeroAB({
 
             {hero.image && (
               <img
-                src={`${API_URL}${hero.image.url}`}
+                // src={`${API_URL}${hero.image.url}`}
+                src={hero.image.url}
                 alt={
                   hero.image.alternativeText ||
                   hero.heading?.title
