@@ -1,32 +1,30 @@
+import { getImageUrl } from "@/lib/image";
+
 interface PianoInstructorProps {
   instructor: any;
 }
-
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://127.0.0.1:1337";
 
 export default function PianoInstructor({
   instructor,
 }: PianoInstructorProps) {
   if (!instructor) return null;
 
-  const imageUrl = instructor.image?.url
-    ? `${API_URL}${instructor.image.url}`
-    : "";
+  const imageUrl = getImageUrl(instructor?.image?.url);
 
   return (
-    <section className=" program-instructor py-section-padding-v bg-white">
+    <section className="program-instructor py-section-padding-v bg-white">
       <div className="container mx-auto px-[5vw]">
         <div className="bg-navy-deep rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
 
           {/* Image */}
           <div className="md:w-1/2 aspect-square md:aspect-auto">
-            <img
-              className="w-full h-full object-cover"
-              src={imageUrl}
-              alt={instructor.heading?.title}
-            />
+            {imageUrl && (
+              <img
+                className="w-full h-full object-cover"
+                src={imageUrl}
+                alt={instructor.heading?.title || ""}
+              />
+            )}
           </div>
 
           {/* Content */}

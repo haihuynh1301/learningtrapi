@@ -1,19 +1,15 @@
+import { getImageUrl } from "@/lib/image";
+
 interface PianoHeroProps {
   hero: any;
 }
-
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://127.0.0.1:1337";
 
 export default function PianoHero({
   hero,
 }: PianoHeroProps) {
   if (!hero) return null;
 
-  const imageUrl = hero.image?.url
-    ? `${API_URL}${hero.image.url}`
-    : "";
+  const imageUrl = getImageUrl(hero.image?.url);
 
   return (
     <section className="hero-program relative min-h-[819px] flex items-center pt-24 overflow-hidden bg-navy-deep">
@@ -27,10 +23,8 @@ export default function PianoHero({
       </div>
 
       <div className="container mx-auto px-[5vw] grid lg:grid-cols-12 gap-gutter-grid items-center relative z-10">
-
         {/* Left Content */}
         <div className="lg:col-span-7">
-
           <div className="flex items-center gap-4 mb-6">
             <span className="font-label-md text-gold-light uppercase tracking-widest">
               {hero.heading?.tag}
@@ -50,7 +44,6 @@ export default function PianoHero({
           )}
 
           <div className="flex flex-wrap gap-8 items-center">
-
             {hero.items?.map(
               (item: any, index: number) => (
                 <div
@@ -73,24 +66,23 @@ export default function PianoHero({
                 </div>
               )
             )}
-
           </div>
         </div>
 
         {/* Right Image */}
         <div className="lg:col-span-5 relative">
-
           <div className="aspect-[4/5] rounded-lg overflow-hidden border border-white/10 shadow-2xl">
-            <img
-              className="w-full h-full object-cover"
-              src={imageUrl}
-              alt={hero.heading?.title}
-            />
+            {imageUrl && (
+              <img
+                className="w-full h-full object-cover"
+                src={imageUrl}
+                alt={hero.heading?.title || "Program"}
+              />
+            )}
           </div>
 
           {/* Quote Card */}
           <div className="absolute -bottom-10 -left-10 hidden md:block p-8 bg-navy-mid/90 backdrop-blur-xl border border-gold-light/20 rounded-xl shadow-2xl max-w-xs">
-
             <span className="material-symbols-outlined text-gold-light mb-4">
               {hero.icon}
             </span>
@@ -98,11 +90,8 @@ export default function PianoHero({
             <p className="font-body-sm text-white/90 italic whitespace-pre-line">
               {hero.badge}
             </p>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
