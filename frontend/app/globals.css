@@ -881,6 +881,7 @@ section {
 
 .faq-answer--active {
   display: block;
+    max-height: 100% !important;
 }
 
 .faq-icon--active {
